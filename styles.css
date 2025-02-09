@@ -1,1 +1,44 @@
+/* Fonts and Color Scheme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5e1; /* Off-white background */
+    color: #000; /* Black text for index wording */
+    margin: 0;
+    padding: 0;
+}
 
+/* Background Image */
+body {
+    background-image: url('path-to-your-transparent-image.png'); /* Path to your transparent image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.9; /* Slight transparency for the background image */
+}
+
+header, nav {
+    background-color: #ff6347; /* Vibrant color for header and nav */
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: #ffa07a; /* Lighter vibrant color on hover */
+}
+
+.section-content {
+    padding: 1rem;
+}
+
+.under-construction {
+    background-color: #ffd700;
+    color: #000;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}
