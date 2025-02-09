@@ -7,6 +7,14 @@ body {
     padding: 0;
 }
 
+/* Background Image */
+body {
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 header, nav {
     background-color: #8b4513;
     color: #fff;
