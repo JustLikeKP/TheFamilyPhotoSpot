@@ -25,13 +25,11 @@
         </ul>
     </nav>
     <main>
-        <h2>Welcome to Our Family Website</h2>
-        <p>
-            Dive into the rich tapestry of our family's history. Here, we celebrate the moments, big and small, that have shaped who we are today.
-        </p>
-        <p>
-            From cherished photographs to stories passed down through generations, this is our collective memory brought to life.
-        </p>
+        <section>
+            <h2>Welcome to Our Family Website</h2>
+            <p>Dive into the rich tapestry of our family's history. Here, we celebrate the moments, big and small, that have shaped who we are today.</p>
+            <p>From cherished photographs to stories passed down through generations, this is our collective memory brought to life.</p>
+        </section>
         <section>
             <h3>Latest Updates</h3>
             <ul>
@@ -42,11 +40,12 @@
         </section>
         <section>
             <h3>Our Mission</h3>
-            <p>
-                This website is a labor of love, created to keep our family connected despite the miles between us. Whether you want to reminisce over old photos, share a new story, or plan our next gathering, this is the place to stay united.
-            </p>
+            <p>This website is a labor of love, created to keep our family connected despite the miles between us. Whether you want to reminisce over old photos, share a new story, or plan our next gathering, this is the place to stay united.</p>
         </section>
-        <button>Explore More</button>
+        <button onclick="showInfo()">Explore More</button>
+        <div id="additionalInfo" style="display: none;">
+            <p>Here's some more information about our family traditions, special events, and how we stay connected.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Our Family's Journey | <a href="contact.html">Contact Us</a></p>
