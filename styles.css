@@ -1,37 +1,13 @@
-/* styles.css */
-
-/* Add these styles to your existing CSS */
-
-.slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
+/* Navigation Menu */
+nav ul {
+    /* Existing styles */
 }
 
-.slide {
-    display: none;
+nav a {
+    /* Existing styles */
 }
 
-.slide img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#prev {
-    left: 0;
-}
-
-#next {
-    right: 0;
+nav a.active {
+    color: #8e44ad;
+    border-bottom: 2px solid #8e44ad;
 }
