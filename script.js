@@ -1,30 +1,45 @@
 // script.js
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('button');
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
+    buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = '#8e44ad'; // Change to accent color
+        });
+
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = ''; // Revert to original color
+        });
     });
-    currentSlide = index;
-}
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-}
+    // Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
-}
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+        currentSlide = index;
+    }
 
-document.querySelector('#next').addEventListener('click', nextSlide);
-document.querySelector('#prev').addEventListener('click', prevSlide);
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
 
-window.onload = () => {
-    showSlide(currentSlide);
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
-};
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    document.querySelector('#next').addEventListener('click', nextSlide);
+    document.querySelector('#prev').addEventListener('click', prevSlide);
+
+    window.onload = () => {
+        showSlide(currentSlide);
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    };
+});
