@@ -8,7 +8,7 @@ function showEventDetails() {
 }
 
 let slideIndex = 0;
-const images = ["photos/photo1.jpg", "photos/photo2.jpg", "photos/photo3.jpg"];
+const images = ["photos/photo1.jpg"];
 
 function changeSlide(n) {
     slideIndex += n;
