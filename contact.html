@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Photos</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Contact</h1>
+        <h1>Photos</h1>
         <img src="path-to-your-banner-image.jpg" alt="Family Photo Banner">
         <nav>
             <ul>
@@ -26,18 +26,17 @@
     </header>
     <main>
         <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or want to get in touch, please fill out the form below.</p>
-            <form id="contact-form" onsubmit="return handleSubmit(event)">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea><br>
-                <button type="submit">Send</button>
-            </form>
-            <p id="submission-message" style="display: none;">Thank you for your message! We will get back to you soon.</p>
+            <h2>Family Photos</h2>
+            <div class="slideshow-container">
+                <img id="slideshow-image" src="path-to-image1.jpg" alt="Family Photo 1" style="width:100%">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <div class="photo-gallery">
+                <img src="https://www.alamy.com/stock-photo/african-family.html" alt="African Family 1" style="width:100%">
+                <img src="https://www.shutterstock.com/image-photo/portrait-african-family-four-national-costumes-2198533297" alt="African Family 2" style="width:100%">
+                <img src="https://ar.inspiredpencil.com/pictures-2023/african-family-pictures" alt="African Family 3" style="width:100%">
+            </div>
         </section>
     </main>
     <footer>
