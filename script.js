@@ -8,7 +8,7 @@ function showEventDetails() {
 }
 
 let slideIndex = 0;
-const images = ["path-to-image1.jpg", "path-to-image2.jpg", "path-to-image3.jpg"];
+const images = ["photos/photo1.jpg", "photos/photo2.jpg", "photos/photo3.jpg"];
 
 function changeSlide(n) {
     slideIndex += n;
@@ -45,4 +45,24 @@ function handleSubmit(event) {
     event.preventDefault();
     document.getElementById("submission-message").style.display = "block";
     document.getElementById("contact-form").reset();
+}
+
+function uploadPhoto() {
+    const input = document.getElementById("photo-input");
+    const photoContainer = document.getElementById("uploaded-photo");
+    
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function (e) {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            photoContainer.innerHTML = "";
+            photoContainer.appendChild(img);
+        };
+        
+        reader.readAsDataURL(input.files[0]);
+    } else {
+        alert("Please select a photo to upload.");
+    }
 }
