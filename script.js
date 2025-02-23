@@ -24,3 +24,25 @@ function startTimer() {
     let minutes = parseInt(document.getElementById("minutes").value);
     let seconds = parseInt(document.getElementById("seconds").value);
     let totalSeconds = minutes * 60 + seconds;
+    
+    const timerDisplay = document.getElementById("timer-display");
+    timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    
+    const interval = setInterval(() => {
+        if (totalSeconds <= 0) {
+            clearInterval(interval);
+            alert("Time's up!");
+        } else {
+            totalSeconds--;
+            let mins = Math.floor(totalSeconds / 60);
+            let secs = totalSeconds % 60;
+            timerDisplay.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+    }, 1000);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    document.getElementById("submission-message").style.display = "block";
+    document.getElementById("contact-form").reset();
+}
