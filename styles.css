@@ -103,3 +103,14 @@ footer {
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.photo-upload {
+    margin-top: 2rem;
+}
+
+#uploaded-photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 1rem;
+}
